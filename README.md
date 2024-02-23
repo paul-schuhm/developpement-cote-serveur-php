@@ -1,18 +1,36 @@
 # Développement côté serveur avec PHP
 
 - [Développement côté serveur avec PHP](#développement-côté-serveur-avec-php)
-    - [Module 1 - Bases de PHP](#module-1---bases-de-php)
-    - [Module 2 - PHP pour le web (pages dynamiques et formulaires)](#module-2---php-pour-le-web-pages-dynamiques-et-formulaires)
+  - [Concepts et notions à matriser à l'issue du cours](#concepts-et-notions-à-matriser-à-lissue-du-cours)
+  - [Module 1 - Bases de PHP](#module-1---bases-de-php)
+  - [Module 2 - PHP pour le web (pages dynamiques et formulaires)](#module-2---php-pour-le-web-pages-dynamiques-et-formulaires)
   - [Références](#références)
     - [Apprendre les bases de PHP](#apprendre-les-bases-de-php)
     - [Livres](#livres)
 
 
-### Module 1 - Bases de PHP
+## Concepts et notions à matriser à l'issue du cours
+
+- Qu'est ce que PHP ?
+- Comment utiliser PHP 
+- PHP dans le terminal (*mode CLI*)
+- PHP sur un serveur web (*mode web*), avec le serveur intégré de développement de PHP
+- Comment PHP interprète un script, les balises PHP (ouverture et fermeture)
+- Les types *primitifs* (float, int, string, array)
+- Utiliser des variables
+- Déclarer et utiliser des fonctions, intérêt des fonctions (abstractions)
+- Déclarer et manipuler les tableaux PHP
+- Les structures de contrôle en PHP : for, foreach, while, if/elseif/else
+- Fonctionnement du web : client, serveur, serveur web, requête HTTP, réponse HTTP, méthode HTTP GET, méthode HTTP POST, composition des URL (protocole, host, path, paramètres d'URL)
+- Balise `form`, soumettre un formulaire
+- Traitement des formulaires en PHP
+- Usage des variables *Super Globales* `$_POST`, `$_GET`, `$_SERVER`.
+
+## Module 1 - Bases de PHP
 
 - [Accéder aux démos faites en cours sur les bases de php](./demos/php-bases/)
 
-### Module 2 - PHP pour le web (pages dynamiques et formulaires)
+## Module 2 - PHP pour le web (pages dynamiques et formulaires)
 
 - [Accéder aux démos faites en cours](./demos/web/)
 
@@ -20,6 +38,7 @@
 
 ### Apprendre les bases de PHP
 
+- [Une introduction à PHP](https://www.php.net/manual/fr/tutorial.php), tutoriel en français du site officiel de PHP. Le suivre et suivre les liens. Explorer.
 - [PHP : Le tutoriel pour grands débutants pressés](https://sylvie-vauthier.developpez.com/tutoriels/php/grand-debutant/?page=fondamentaux#LII), chapitres 1 à 5.
 - [Concevez votre site web avec PHP et MySQL](https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql), d'Openclassrooms. **Faire les parties 1 à 3**.
 
