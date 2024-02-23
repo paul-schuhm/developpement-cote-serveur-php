@@ -1,16 +1,17 @@
 # Développement côté serveur avec PHP
 
 - [Développement côté serveur avec PHP](#développement-côté-serveur-avec-php)
-  - [Démos](#démos)
-    - [Bases de PHP](#bases-de-php)
+    - [Module 1 - Bases de PHP](#module-1---bases-de-php)
+    - [Module 2 - PHP pour le web (pages dynamiques et formulaires)](#module-2---php-pour-le-web-pages-dynamiques-et-formulaires)
   - [Références](#références)
 
 
-## Démos
+### Module 1 - Bases de PHP
 
-### Bases de PHP
+- [Accéder aux démos faites en cours sur les bases de php](./demos/php-bases/)
 
-- [Accéder à la démo live sur les bases de PHP](./demos/index.php)
+### Module 2 - PHP pour le web (pages dynamiques et formulaires)
 
+- [Accéder aux démos faites](./demos/web/)
 
 ## Références
