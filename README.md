@@ -20,11 +20,15 @@
 - Utiliser des variables
 - Déclarer et utiliser des fonctions, intérêt des fonctions (abstractions)
 - Déclarer et manipuler les tableaux PHP
+- Connaître quelques fonctions natives de PHP, manipuler les chaines de caractères (concaténation, Heredoc, etc.)
 - Les structures de contrôle en PHP : for, foreach, while, if/elseif/else
 - Fonctionnement du web : client, serveur, serveur web, requête HTTP, réponse HTTP, méthode HTTP GET, méthode HTTP POST, composition des URL (protocole, host, path, paramètres d'URL)
 - Balise `form`, soumettre un formulaire
 - Traitement des formulaires en PHP
-- Usage des variables *Super Globales* `$_POST`, `$_GET`, `$_SERVER`.
+- Usage des variables *Super Globales* `$_POST`, `$_GET`, `$_SERVER`
+- Création de templates avec PHP, blocs conditionnels
+- Quelques notions de sécurité côté serveur (validation, échappement, sanitization)
+- Manipuler le Javascript et le CSS en PHP
 
 ## Module 1 - Bases de PHP
 
