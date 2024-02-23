@@ -12,6 +12,6 @@
 
 ### Module 2 - PHP pour le web (pages dynamiques et formulaires)
 
-- [Accéder aux démos faites](./demos/web/)
+- [Accéder aux démos faites en cours](./demos/web/)
 
 ## Références
