@@ -4,14 +4,14 @@
 
 A la racine de la démo (dans le dossier)
 
-~~~bash
+~~~
 php -S localhost:5001
 ~~~
 
 ou depuis l’extérieur
 
-~~~bash
-php -S localhost:5001 -t demo-site-multi-fichiers
+~~~
+php -S localhost:5001 -t templates
 ~~~
 
 ## Exercices
