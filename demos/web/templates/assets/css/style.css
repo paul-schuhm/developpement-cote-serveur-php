@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+
+header {
+    background-color: grey;
+    padding: 12px;
+}
+
+footer{
+    background-color: grey;
+
+}
+
+nav ul {
+    margin: 0;
+}
