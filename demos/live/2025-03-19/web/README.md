@@ -2,6 +2,13 @@
 
 Une démo de site web pour passer des commandes de fournitures de bureau.
 
+
+## Spécifications
+
+> Les spécifications sont l'expression formelle des exigences de notre système.
+
+- Un même produit ne peut être commandé qu'en 20 exemplaires maximum (lié à notre stock)
+
 ## Lancer la démo
 
 1. Se placer à la racine du projet (au même niveau que le fichier `index.php`)
