@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Exercice 15 (https://aymeric-auberton.fr/academie/php/exercices)
+ * Module 1 Exercice 4 (Exercice 15 (https://aymeric-auberton.fr/academie/php/exercices))
  */
 
 //Générer 10 nombres aléatoires

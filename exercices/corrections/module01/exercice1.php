@@ -1,6 +1,6 @@
 <?php
 
-//Exercice 0 
+//Module 1 Exercice 1
 
 $pays_population = array(
     'France' => 67595000,
