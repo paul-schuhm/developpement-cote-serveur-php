@@ -51,7 +51,8 @@ if (isset($_POST['submit'])) {
     //Validation du produit:
     // - Non renseigné
     // - Pas dans le catalogue
-    if (!isset($product) || !in_array($product, $products)) {
+    // if (!isset($product) || !in_array($product, $products)) {
+    if (!isset($product) || !array_key_exists($product, $products)) {
         $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
     } //Validation du produit:
     // - Non renseigné
