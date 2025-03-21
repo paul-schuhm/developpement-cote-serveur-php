@@ -1,5 +1,9 @@
 h1 {
-    background: red;
-    color: white;
     padding: 5px;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+    border: 1px dotted red;
 }

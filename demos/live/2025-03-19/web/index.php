@@ -77,8 +77,11 @@ Règles métiers :
                 }
                 ?>
             </p>
-            <label for="quantity">Quantité</label>
-            <input type="number" name="quantity" id="quantity" value="1">
+
+            <div class="<?php echo isset($errors['quantity']) ? "error" : ""; ?>">
+                <label for="quantity">Quantité</label>
+                <input type="number" name="quantity" id="quantity" value="1">
+            </div>
         </div>
 
         <div>
