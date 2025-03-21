@@ -5,7 +5,16 @@
  * Catalogue de produits
  */
 
-$products = ['mouse', 'mat', 'chair', 'keyboard', 'desktop'];
+// $products = ['mouse', 'mat', 'chair', 'keyboard', 'desktop'];
+
+$products = [
+    'mouse' => "Souris sans fil",
+    'mat' => "Tapis de souris",
+    'keyboard' => 'Clavier',
+    'chair' => 'Chaise de bureau',
+    'desktop' => 'Bureau',
+    'pen' => 'Stylo noir'
+];
 
 
 /**
@@ -42,15 +51,14 @@ if (isset($_POST['submit'])) {
     //Validation du produit:
     // - Non renseigné
     // - Pas dans le catalogue
-    if(!isset($product) || !in_array($product, $products)){
+    if (!isset($product) || !in_array($product, $products)) {
         $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
     } //Validation du produit:
     // - Non renseigné
     // - Pas dans le catalogue
-    if(!isset($product) || !in_array($product, $products)){
+    if (!isset($product) || !in_array($product, $products)) {
         $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
     }
-
 }
 
 ?>
@@ -82,8 +90,8 @@ Règles métiers :
 
         <div>
             <p class="error">
-            <?php
-            //S'il y a une erreur sur le champ produit (si la clef 'product' existe dans le tableau $errors)
+                <?php
+                //S'il y a une erreur sur le champ produit (si la clef 'product' existe dans le tableau $errors)
                 if (isset($errors['product'])) {
                     echo $errors['product'];
                 }
@@ -91,13 +99,19 @@ Règles métiers :
             </p>
             <label for="product">Choisir un produit: </label>
             <!-- Doit être généré à partir de mon catalogue de produits ! -->
-             <!-- EXERCICE : Générer le HTML (select) à partir du catalogue ($products) -->
+            <!-- EXERCICE : Générer le HTML (select) à partir du catalogue ($products) -->
             <select name="product" id="product">
-                <option value="mouse">Souris sans fil</option>
-                <option value="mat">Tapis de souris</option>
-                <option value="chair">Chaise de bureau</option>
-                <option value="keyboard">Clavier</option>
-                <option value="desktop">Bureau</option>
+                <?php foreach ($products as $name => $label) : ?>
+                    <!-- Dans la boucle -->
+                    <option value="<?php echo $name; ?>"><?php echo $label; ?></option>
+                <?php endforeach; ?>
+
+                <?php
+                //Alternative
+                // foreach($product as $name => $label){
+                //     echo "<option name='$name'>$label</option>";
+                // }
+                ?>
             </select>
         </div>
 
