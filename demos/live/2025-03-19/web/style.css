@@ -7,3 +7,9 @@ h1 {
     font-weight: bold;
     /* border: 1px dotted red; */
 }
+
+.message-validation{
+    background-color: green;
+    color: white;
+    padding: 5px;
+}

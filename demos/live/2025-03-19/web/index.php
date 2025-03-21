@@ -54,11 +54,12 @@ if (isset($_POST['submit'])) {
     // if (!isset($product) || !in_array($product, $products)) {
     if (!isset($product) || !array_key_exists($product, $products)) {
         $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
-    } //Validation du produit:
-    // - Non renseigné
-    // - Pas dans le catalogue
-    if (!isset($product) || !in_array($product, $products)) {
-        $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
+    }
+
+    //Valider la commande
+    if (empty($errors)) {
+        //Toute la logique pour traiter la commande...
+        $message = "Merci, votre commande a été validée !";
     }
 }
 
@@ -84,6 +85,15 @@ Règles métiers :
 
 <body>
     <h1>Commander des fournitures de bureau</h1>
+
+
+    <p class="message-validation">
+        <?php
+        if (isset($message)) {
+            echo $message;
+        }
+        ?>
+    </p>
 
     <!-- action: URL où on soumet le formulaire. Si on laisse vide, soumettre la requête HTTP à la même URL
      que celle fournissant le formulaire, cad, on va utiliser le même script php. -->
