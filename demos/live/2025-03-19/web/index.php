@@ -5,7 +5,7 @@
  * Catalogue de produits
  */
 
-$products = ['mouse', 'mat', 'chair', 'keyboard'];
+$products = ['mouse', 'mat', 'chair', 'keyboard', 'desktop'];
 
 
 /**
@@ -90,11 +90,14 @@ Règles métiers :
                 ?>
             </p>
             <label for="product">Choisir un produit: </label>
+            <!-- Doit être généré à partir de mon catalogue de produits ! -->
+             <!-- EXERCICE : Générer le HTML (select) à partir du catalogue ($products) -->
             <select name="product" id="product">
                 <option value="mouse">Souris sans fil</option>
                 <option value="mat">Tapis de souris</option>
                 <option value="chair">Chaise de bureau</option>
                 <option value="keyboard">Clavier</option>
+                <option value="desktop">Bureau</option>
             </select>
         </div>
 
