@@ -33,10 +33,12 @@
 ## Module 1 - Bases de PHP
 
 - [Accéder aux démos faites en cours sur les bases de php](./demos/php-bases/)
+- [Accéder aux corrections des exercices](./exercices/corrections/module01/)
 
 ## Module 2 - PHP pour le web (pages dynamiques et formulaires)
 
 - [Accéder aux démos faites en cours](./demos/web/)
+- [Accéder aux corrections des exercices](./exercices/corrections/module02/)
 
 ## Références
 

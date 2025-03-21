@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Europe/Paris');
 
 /**
  * Catalogue de produits
@@ -71,6 +71,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,13 +93,7 @@ Règles métiers :
 
     <a href="/">Revenir à l'accueil</a>
 
-    <p class="message-validation">
-        <?php
-        if (isset($message)) {
-            echo $message;
-        }
-        ?>
-    </p>
+    <p class="message-validation"><?php echo isset($message) ? $message : "";?></p>
 
     <!-- action: URL où on soumet le formulaire. Si on laisse vide, soumettre la requête HTTP à la même URL
      que celle fournissant le formulaire, cad, on va utiliser le même script php. -->
