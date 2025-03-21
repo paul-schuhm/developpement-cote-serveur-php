@@ -7,15 +7,29 @@
 //Variables superglobales
 
 //Affiche toutes les informations sur la reqûete POST fournie au script.
-// var_dump($_POST);
 
 //Est ce que le formulaire a été soumis ?
 //On teste la présence de la clef 'submit' (input submit) = formulaire soumis
 if (isset($_POST['submit'])) {
-    echo "Traitement de la commande en cours...\n";
-    //Ecrire "Vous avez commandé [quantity] [product]."
-    echo "Vous avez commandé " . $_POST['quantity'] . " " . $_POST['product'];
-    die;
+
+    //Gestion des erreurs
+    $errors = [];
+
+    //Valider les données qui ont été soumises par le client (sécurité)
+    //Récupérer toutes les données dont on a besoin
+    $quantity = $_POST['quantity'];
+    $product = $_POST['product'];
+
+    //1ere chose : vérifier que la quantité est bien définie selon les règles de notre métier.
+
+    //Test pour rejeter une mauvaise valeur : 
+    //- non renseignée : !$isset($quantity) 
+    //- inférieure ou égale à 0 : $quantity <= 0
+    //- supérieure ou égale à 20 :  $quantity > 20
+    if (!isset($quantity) || $quantity <= 0 || $quantity > 20) {
+        //Mauvaise valeur => rejette le formulaire (ne prend pas en compte la commande) 
+        $errors['quantity'] = "Vous ne pouvez pas commander un produit en plus de 20 exemplaires.";
+    }
 }
 
 ?>
@@ -56,8 +70,15 @@ Règles métiers :
         </div>
 
         <div>
+            <p class="error">
+                <?php
+                if (isset($errors['quantity'])) {
+                    echo $errors['quantity'];
+                }
+                ?>
+            </p>
             <label for="quantity">Quantité</label>
-            <input type="number" name="quantity" id="quantity" value="1" min="1" max="20">
+            <input type="number" name="quantity" id="quantity" value="1">
         </div>
 
         <div>
