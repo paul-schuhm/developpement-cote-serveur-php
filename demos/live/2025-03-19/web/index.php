@@ -1,12 +1,19 @@
 <?php
 
+
 /**
- * Traitement du formulaire
+ * Catalogue de produits
+ */
+
+$products = ['mouse', 'mat', 'chair', 'keyboard'];
+
+
+/**
+ * Traitement du formulaire (dans le même fichier)
  */
 
 //Variables superglobales
-
-//Affiche toutes les informations sur la reqûete POST fournie au script.
+//$_POST : Tableau fourni au script contenant toutes les informations sur la reqûete POST.
 
 //Est ce que le formulaire a été soumis ?
 //On teste la présence de la clef 'submit' (input submit) = formulaire soumis
@@ -22,6 +29,7 @@ if (isset($_POST['submit'])) {
 
     //1ere chose : vérifier que la quantité est bien définie selon les règles de notre métier.
 
+    //Validation de la quantité
     //Test pour rejeter une mauvaise valeur : 
     //- non renseignée : !$isset($quantity) 
     //- inférieure ou égale à 0 : $quantity <= 0
@@ -30,6 +38,19 @@ if (isset($_POST['submit'])) {
         //Mauvaise valeur => rejette le formulaire (ne prend pas en compte la commande) 
         $errors['quantity'] = "Vous ne pouvez pas commander un produit en plus de 20 exemplaires.";
     }
+
+    //Validation du produit:
+    // - Non renseigné
+    // - Pas dans le catalogue
+    if(!isset($product) || !in_array($product, $products)){
+        $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
+    } //Validation du produit:
+    // - Non renseigné
+    // - Pas dans le catalogue
+    if(!isset($product) || !in_array($product, $products)){
+        $errors['product'] = "Merci de choisir un produit présent dans notre catalogue.";
+    }
+
 }
 
 ?>
@@ -60,6 +81,14 @@ Règles métiers :
     <form action="" method="POST">
 
         <div>
+            <p class="error">
+            <?php
+            //S'il y a une erreur sur le champ produit (si la clef 'product' existe dans le tableau $errors)
+                if (isset($errors['product'])) {
+                    echo $errors['product'];
+                }
+                ?>
+            </p>
             <label for="product">Choisir un produit: </label>
             <select name="product" id="product">
                 <option value="mouse">Souris sans fil</option>
