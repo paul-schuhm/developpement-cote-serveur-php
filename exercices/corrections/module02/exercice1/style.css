@@ -1,0 +1,18 @@
+h1 {
+    padding: 5px;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+    /* border: 1px dotted red; */
+}
+
+.message-validation{
+    background-color: green;
+    color: white;
+}
+
+form{
+    margin: 10px;
+}
