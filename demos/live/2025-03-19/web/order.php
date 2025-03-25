@@ -26,6 +26,7 @@ $products = [
 
 $clean = [];
 
+
 //Est ce que le formulaire a été soumis ?
 //On teste la présence de la clef 'submit' (input submit) = formulaire soumis
 if (isset($_POST['submit'])) {
