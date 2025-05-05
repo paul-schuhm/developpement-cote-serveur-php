@@ -10,7 +10,7 @@ function theFooter(): void
 
 
 /**
- * Imprime le header HTML sur la sortie. Utiliser le header par défaut si aucun
+ * Imprime le header HTML sur la sortie. Utilise le header par défaut si aucun
  * headerId n'est fourni.
  * @param $headerId Un identifiant de header personnalisé
  * @return void
