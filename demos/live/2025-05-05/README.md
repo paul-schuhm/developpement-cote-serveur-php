@@ -21,4 +21,4 @@ Notions abordées :
 php -S localhost:8080 -t web
 ~~~
 
-Accéder à une fiche produit à l'URL `/single-product.php?code=keyboard` ou avec cURL
+Accéder à une fiche produit à l'URL `/single-product.php?code=keyboard`
