@@ -10,7 +10,7 @@ $pays_population = array(
     'Malte' => 434403,
     'Mexique' => 122273500,
     'Allemagne' => 82800000,
-    'Espagne' => 1
+    'Espagne' => 48000000
 );
 
 //Tester la présence d'une clef
@@ -23,9 +23,6 @@ if(isset($pays_population['Espagne'])){
 }else{
     echo "La clef Espagne n'existe PAS !\n";
 }
-
-die;
-
 
 //20 millions
 $treshold_pop = 20E6;
@@ -49,7 +46,6 @@ foreach($pays_population as $pays => $pop){
 
 //Nombre de pays total
 echo "Il y a " . count($pays_population) . " pays dans la liste\n";
-// JS : console.log(`Il y a ${pays_population.length} dans la liste`)
 
 //Nombre d'habitants en Suisse
 echo "Nombre d'habitants en ". strtolower('Suisse') . " : " . $pays_population['Suisse'] . "\n";
@@ -61,7 +57,7 @@ foreach($pays_population as $pop){
     $total_pop += $pop;
 }
 
-echo "La population totale est de $total_pop\n";
+echo "La population totale est de $total_pop habitants.\n";
 
 //Valeurs min et max
 //On suppose que le 1er element est le plus petit et le plus grand
@@ -69,8 +65,11 @@ echo "La population totale est de $total_pop\n";
 
 //On suppose que la france est le pays avec la plus petite population (initialisation)
 $country_min = 'France';
+//On suppose que la france est le pays avec la plus grande population (initialisation)
+$country_max = 'France';
 //Population de la france
 $min = $pays_population[$country_min];
+$max = $pays_population[$country_max];
 
 foreach($pays_population as $pays => $pop){
     if($pop < $min){
@@ -79,6 +78,20 @@ foreach($pays_population as $pays => $pop){
         $country_min = $pays;
         $min = $pays_population[$country_min];
     }
+
+    if($pop > $max){
+        $country_max = $pays;
+        $max = $pays_population[$country_max];
+    }
 }
 
-echo "Le pays avec la population la plus faible est $country_min\n";
+echo "Le pays avec la population la plus faible ($min) est $country_min\n";
+echo "Le pays avec la population la plus forte ($max) est $country_max\n";
+
+//Tri du tableau
+//La fonction sort ne préserve pas les clefs. Pour cela, il faut utiliser asort
+//@see: https://www.php.net/manual/fr/array.sorting.php
+asort($pays_population);
+foreach($pays_population as $pays => $pop){
+    echo $pays . " - " . $pop . PHP_EOL;
+}
