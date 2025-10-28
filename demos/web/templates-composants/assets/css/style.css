@@ -1,0 +1,31 @@
+body{
+    /* Réinitialiser les valeurs par défaut appliquées par le navigateur */
+    margin: 0;
+}
+
+nav ul{
+    /* Retirer les bullets points */
+    list-style-type: none;
+    /* Flex container : aligner les liens de navigation */
+    display: flex;
+    justify-content: center;
+    /* Espace minimum entre des flex items */
+    gap: 16px;
+}
+
+nav{
+    /* Améliore la navbar */
+    padding: 8px;
+    background-color: pink;
+}
+
+h1{
+    text-decoration: underline rgb(85, 85, 85);
+    color: rgb(85, 85, 85);
+    font-size: 48pt;
+    letter-spacing: -1px;
+}
+
+main, footer, h1{
+    padding: 12px;
+}
